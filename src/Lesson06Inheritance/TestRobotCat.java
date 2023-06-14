@@ -14,5 +14,7 @@ public class TestRobotCat {
         System.out.println(solarEnergyRobotCat.getName());
         System.out.println(solarEnergyRobotCat.getProductionDate());
         solarEnergyRobotCat.runSolarEnergy();
+
+        System.out.println("Hello robot cat!");
     }
 }
