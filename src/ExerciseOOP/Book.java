@@ -48,4 +48,14 @@ public class Book {
     public void setAvailabilityStatus(String availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publicationYear='" + publicationYear + '\'' +
+                ", availabilityStatus='" + availabilityStatus + '\'' +
+                '}';
+    }
 }
