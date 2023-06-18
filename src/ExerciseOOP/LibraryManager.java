@@ -55,18 +55,31 @@ public class LibraryManager {
 
     public void handleUserCommands() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What do you want?. Please type the number as the menu");
-        int userType = scanner.nextInt();
+        boolean userWantContinue = true;
+        do{
+            System.out.println("What do you want?. Please type the number as the menu");
+            int userType = scanner.nextInt();
 
-        if (userType == ADD_BOOK_COMMAND) {
-            addBook();
-        }
-        if (userType == SEARCH_BOOK_COMMAND) {
-            handleSearchBooks();
-        }
-        if (userType == BORROW_BOOK_COMMAND) {
-            borrowBook();
-        }
+            if (userType == ADD_BOOK_COMMAND) {
+                addBook();
+            }
+            if (userType == SEARCH_BOOK_COMMAND) {
+                handleSearchBooks();
+            }
+            if (userType == BORROW_BOOK_COMMAND) {
+                borrowBook();
+            }
+            System.out.println("Do you want to continue? (1/0)");
+            int userAnswer = scanner.nextInt();
+            if(userAnswer == 1){
+
+                userWantContinue = true;
+            }
+            else {
+                userWantContinue = false;
+            }
+
+        }while (userWantContinue);
     }
 
     private void handleSearchBooks() {
