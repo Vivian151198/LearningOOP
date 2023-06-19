@@ -1,6 +1,8 @@
 package ExerciseOOP;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
 
     private String title;
     private String author;
