@@ -14,7 +14,7 @@ public class DataReader {
         List<Book> bookList = new ArrayList<>();
         try (FileInputStream fileIn = new FileInputStream("book.ser");
              ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-            bookList = (List<Book>) objectIn.readObject(); // Read the Book object
+             bookList = (List<Book>) objectIn.readObject(); // Read the Book object
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
