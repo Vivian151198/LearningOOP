@@ -56,7 +56,7 @@ public class TestExercise {
 //        String e = d + c;
 //        System.out.println(e);
 
-        String sumStrings = solution.addStrings("129", "234");
+        String sumStrings = solution.addStrings("129124124124124", "234");
         System.out.println(sumStrings);
     }
 }
