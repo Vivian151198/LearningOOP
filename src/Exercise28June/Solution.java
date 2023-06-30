@@ -31,23 +31,24 @@ public class Solution {
         String sumStrings = "";
         int missedNumber = 0;
         int sum = 0;
-        if (num1.length() < num2.length()) {
-            int number = num2.length() - num1.length();
+        if (num1.length() > num2.length()) {
+            int num = num1.length() - num2.length();
             String addedString = "";
-            for (int i = 0; i < number; i++) {
-                addedString += "0";
+            for (int i = 0; i < num; i++) {
+                addedString = "0" + addedString;
             }
-            num1 = addedString + num1;
+
+            num2 = addedString + num2;
         }
 
-        if (num2.length() < num1.length()) {
-            int number = num1.length() - num2.length();
+        if (num2.length() > num1.length()) {
+            int num = num2.length() - num1.length();
             String addedString = "";
-            for (int i = 0; i < number; i++) {
-                addedString += "0";
+            for (int i = 0; i < num; i++) {
+                addedString = "0" + addedString;
             }
-            num2 = addedString + num2;
 
+            num1 = addedString + num1;
         }
 
         for (int i = num2.length() - 1; i >= 0; i--) {
@@ -60,6 +61,7 @@ public class Solution {
                 missedNumber = 0;
             }
         }
+
         if (missedNumber == 1) {
             sumStrings = String.valueOf(missedNumber) + sumStrings;
         }

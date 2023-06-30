@@ -51,12 +51,12 @@ public class TestExercise {
 //        int sum1 = Integer.parseInt(a);
 //        System.out.println(sum1);
 //
-//        String c = "1";.
+//        String c = "1";
 //        String d = "2";
 //        String e = d + c;
 //        System.out.println(e);
 
-        String sumStrings = solution.addStrings("987654321", "888777999");
+        String sumStrings = solution.addStrings("129124124124124", "234");
         System.out.println(sumStrings);
     }
 }
