@@ -4,6 +4,6 @@ import java.security.SecureRandom;
 
 public class Dog extends Animal{
     public Dog() {
-        super(new SecureRandom().nextInt(70));
+        super(new Builder().speed(new SecureRandom().nextInt(70)).flyAble(false));
     }
 }

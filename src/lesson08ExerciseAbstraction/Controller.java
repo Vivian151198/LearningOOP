@@ -1,23 +1,10 @@
-package lesson06Exercise;
-
+package lesson08ExerciseAbstraction;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RacingController {
-    public static void main(String[] args) {
-        Animal tiger = new Tiger();
-        Animal dog = new Dog();
-        Animal horse = new Horse();
-        Animal eagle = new Eagle();
-        List<Animal> animals = new ArrayList<>();
-        animals.add(tiger);
-        animals.add(dog);
-        animals.add(horse);
-        animals.add(eagle);
-        runContest(animals);
-    }
+public class Controller {
 
-    public static void runContest(List<Animal> animals) {
+    public void runContest(List <Animal> animals) {
         Animal winner = null;
         List<Animal> applicableAnimals = applicableAnimals(animals);
 
@@ -36,12 +23,12 @@ public class RacingController {
     }
 
     //Support method
-    private static List<Animal> applicableAnimals(List<Animal> animals) {
+    private List<Animal> applicableAnimals(List<Animal> animals) {
         List<Animal> applicableAnimals = new ArrayList<>();
         List<Animal> animalsCanFly = new ArrayList<>();
 
         for (Animal animal : animals) {
-            if (animal.isFlyAble() == true) {
+            if (animal.flyAble() == true) {
                 animalsCanFly.add(animal);
             } else {
                 applicableAnimals.add(animal);

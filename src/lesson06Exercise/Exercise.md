@@ -15,3 +15,9 @@ Format: Winner is <Animal name>, with speed: <speed>
 
 Hints:
     - Class name can get from: object.getClass().getSimpleName();
+
+## Extend: 
+* Horse, Tiger, Doge, Eagle, Goose, Falcon,...
+* Run on the ground: Applicable
+* Animal: flyAble, speed
+* Builder Design Pattern.
