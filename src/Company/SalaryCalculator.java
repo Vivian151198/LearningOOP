@@ -23,4 +23,5 @@ public class SalaryCalculator {
         }
         return total;
     }
+
 }

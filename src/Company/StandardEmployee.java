@@ -7,4 +7,3 @@ public class StandardEmployee extends Employee{
         return 25.0;
     }
 }
-
